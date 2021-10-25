@@ -2,10 +2,22 @@
 *{box-sizing: border-box;}
 body{
     background-image: url("https://i.imgur.com/A5vq1yV.png");
+    background-attachment: fixed;
     margin:0;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-color: rgb(77, 112, 128);
 }
+.survey{
+    background-image:url("https://i.imgur.com/HIpk1ay.png"), url("https://i.imgur.com/A5vq1yV.png");
+    background-position-x: left,0;
+    background-position-y: bottom,0;
+    background-size: 9%,100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-bottom:0;
+    margin-right: 0;
+}
+
 /*    NAVBAR     */
     .navbar{
         overflow:hidden;
@@ -47,7 +59,8 @@ body{
         padding: 5px;
         border: 4px solid rgb(28, 46, 54);
         background-color: rgb(44, 71, 83);
-        color: white;
+        color:rgb(252, 248, 231);
+        /* color: white; */
         overflow: hidden;
     }
     .main{
@@ -57,6 +70,52 @@ body{
         width: 50%;
         text-align: center;
     }
+    .blog{
+    
+        border: none;
+        margin-top: 7%;
+        justify-content: space-around;
+        display:grid;
+        grid-template-columns: 25% 55%;
+
+        background:none;
+    }
+    #lower{
+        border: none;
+        margin-top: 7%;
+        justify-content: space-around;
+        display:grid;
+        grid-template-columns: 40% 40%;
+        row-gap: 50px;
+        background:none;
+    
+
+    }
+    .blog div{
+        
+        width: 100%;
+        height: 100%;
+        margin-bottom: 5px;
+    }
+  
+    .dateNtime{
+        margin-top:-5px;
+        font-style: italic;
+        font-weight: bold;
+    }
+    .blogText{
+        border-style: solid !important;
+        border: cadetblue ;
+        background-color: rgb(66, 109, 110) !important;
+        width: 120%;
+         
+    }
+    .blog textarea{
+        resize: none;
+        width: 100%;
+        display: block;
+    }
+
     
     .content {
         margin-top: 7%;
@@ -99,14 +158,15 @@ body{
     {
         margin-top: 7%;
         margin-bottom:20px;
-        width: 80%;
+        width: 90%;
         margin:auto;
         border:none;
         white-space: nowrap;
         display: grid;
-        grid-template-columns: 40% 40% ;
+        grid-template-columns: 35% 35% ;
         justify-content: space-around;
         padding: 20px;
+        row-gap: 20px;
         text-align: center;
     }
     .contentMusic div{
@@ -120,14 +180,14 @@ body{
         font-family:'Times New Roman', Times, serif;
         margin-top:0%;
         border-radius: 25%;
-        border-style: solid;
-        border: 4px solid rgb(28, 46, 54);
+        border: 4px dashed rgb(28, 46, 54);
         color:cornsilk;
     
     }
     .musicContainer{
-        padding-top:5px;
+        padding-top:10px;
         font-size: 1.4em;
+        
 
     }
     .contentGallery
@@ -170,8 +230,6 @@ body{
         
     }
     .post{
-
-        
         border: none !important;
         border-right: 5px solid rgb(28, 46, 54)  !important;
         
@@ -184,6 +242,26 @@ body{
     }
     #last{
         border:none !important;
+    }
+    .satisfaction{
+        display: grid;
+        grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% ;
+        padding:7px;
+        width: 80%;
+        margin:auto;
+    }
+    #rad{
+        border-bottom: none;
+        text-align: -webkit-center;
+        
+        
+    }
+    #num{
+        text-align: center;
+        border-top: none;
+        margin-bottom: 20px;
+        text-align: -webkit-left;
+        
     }
 /*    ~~DIV     */
 
@@ -199,21 +277,29 @@ body{
         transition: all  0.6s ease-in-out;
     }
     img.musicPic{
-        width:80%;
-        height:85%;
+        width:75%;
+        height:80%;
+        margin-bottom: 20px;
         transition: all  0.6s ease-in-out;
     }
     .filmPic:hover ,.musicPic:hover{
         transition: all  0.3s ease-in-out;
         transform: scale(1.02,1.02) rotate3d(-1,-1,1,5deg);
-        z-index: 10;
-        
     }
     img.galleryPic{
         width:100%;
         margin: auto;
         height: 100%;
         
+    }
+    p img{
+        margin-right: 5px;
+        width: 16px;
+        height: 16px;
+    }
+    #gmail{
+        width:20px;
+        height:14px
     }
 /*    ~~IMG     */
 
@@ -283,6 +369,8 @@ body{
 /* INPUT */
 input{
     cursor:pointer;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 .like{
     width: 32px;
@@ -293,5 +381,46 @@ input{
 }
 form{
     padding:10px
+}
+
+form textarea{
+    width: 70%;
+    height: 150%;
+    resize: none;
+    margin-bottom: 20px;
+    display: block;
+    margin: auto;
+}
+
+fieldset{
+    width: 60%;
+    margin:100px auto 100px;
+    background-color:rgb(44, 71, 83);
+    border: 4px solid rgb(28, 46, 54);
+    color:rgb(252, 248, 231);   
+
+
+    
+}
+input[type=number] {
+    appearance: textfield;
+  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+legend{
+    background-color: rgb(11, 33, 34);
+    color:rgb(252, 248, 231);
+    border-style: dashed;
+    border-radius: 100%;
+    padding: 10px;
+}
+.legendFound{
+    display: inline-block;
+    text-align: left;
+    margin-left: -10px;
+    margin-right: 10px;
 }
 /* ~~INPUT */
