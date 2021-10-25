@@ -8,7 +8,7 @@
     <title>Home</title>
 </head>
 
-<body>
+<body class="survey">
     <div class="navbar">
         <a href="home.html">Home</a>
         <a href="favorites.html">My Favorite Things</a>
@@ -17,5 +17,78 @@
         <a href="survey.html">Survey</a>
         <a href="contact.html">Contact</a>
     </div>
+    <fieldset>
+        <legend>What are your opinions on the website?</legend>
+        <form method="post">
+            <p><strong>Tell us a bit about yourself:</strong></p>
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+            <label for="surname">Surname:</label>
+            <input type="text" required>
+            <br><br>
+            <label for="mail" >E-mail address:</label>
+            <input type="email" required>
+            <label for="phone">Phone number:</label>
+            <input type="number" >
+            <br><br>
+            <label for="Satisfaction"><strong>1. On a scale of 1-10, how satisfied are you with the
+                    site?</strong></label><br><br>
+            <div class="satisfaction" id="rad">
+
+                <input type="radio" class="inputRadio" id="one" name="Satisfaction" value="one">
+                <input type="radio" id="two" name="Satisfaction" value="two">
+                <input type="radio" id="three" name="Satisfaction" value="three">
+                <input type="radio" id="four" name="Satisfaction" value="four">
+                <input type="radio" id="five" name="Satisfaction" value="five">
+                <input type="radio" id="six" name="Satisfaction" value="six">
+                <input type="radio" id="seven" name="Satisfaction" value="seven">
+                <input type="radio" id="eight" name="Satisfaction" value="eight">
+                <input type="radio" id="nine" name="Satisfaction" value="nine">
+                <input type="radio" id="ten" name="Satisfaction" value="ten"><br>
+            </div>
+            <div class="satisfaction" id="num">
+                <label for="one">1</label>
+                <label for="two">2</label>
+                <label for="three">3</label>
+                <label for="four">4</label>
+                <label for="five">5</label>
+                <label for="six">6</label>
+                <label for="seven">7</label>
+                <label for="eight">8</label>
+                <label for="nine">9</label>
+                <label for="ten">10</label>
+            </div>
+            <br>
+            <label for="Elaboration"><strong>2. Please elaborate on your previous rating:</strong></label><br><br>
+            <textarea rows="5" cols="50" placeholder="Type here..."></textarea><br><br>
+            <label for="Recommendation"><strong>3. In your opinion, what could be done to improve the site?</strong></label><br><br>
+            <textarea rows="5" cols="50" placeholder="Type here..."></textarea><br><br>
+            <label for="found"><strong>4. How did you find the website?</strong></label><br><br>
+            <input type="radio" id="Search" name="found">
+            <label for="Search" class="legendFound">Search engine &MediumSpace;</label>
+            <input type="radio" id="friend" name="found">
+            <label for="friend" class="legendFound">A friend</label>
+            <input type="radio" id="other" name="found">
+            <label for="other" class="legendFound">Other &MediumSpace;</label>
+            <br><br><br>
+
+            <label for="which"><strong>5. Which section do you feel needs the most improving?</strong></label>
+            <br><br>
+            <select name="which">
+                <option value="Home">Home</option>
+                <option value="MFT">My Favorite Things</option>
+                <option value="Gallery">Gallery</option>
+                <option value="Blog">Blog</option>
+                <option value="Survey">Survey</option>
+                <option value="Contact">Contact</option>
+            </select><br><br>
+
+            <p>For more input please feel free to <a href="contact.html" style="color: aqua; text-decoration: underline;">contact me.</a></p>
+            <br>
+            <input type="submit"  value="Submit">
+            <input type="reset"  value="Clear">
+        </form>
+    </fieldset>
 </body>
+
 </html>
