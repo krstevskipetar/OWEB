@@ -9,14 +9,16 @@
 </head>
 
 <body class="survey">
-    <div class="navbar">
-        <a href="home.html">Home</a>
-        <a href="favorites.html">My Favorite Things</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
-        <a href="survey.html">Survey</a>
-        <a href="contact.html">Contact</a>
-    </div>
+    <header>
+        <div class="navbar">
+            <a href="home.html">Home</a>
+            <a href="favorites.html">My Favorite Things</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blog.html">Blog</a>
+            <a href="survey.html">Survey</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
     <fieldset>
         <legend>What are your opinions on the website?</legend>
         <form method="post">
@@ -64,29 +66,35 @@
             <label for="Recommendation"><strong>3. In your opinion, what could be done to improve the site?</strong></label><br><br>
             <textarea rows="5" cols="50" placeholder="Type here..."></textarea><br><br>
             <label for="found"><strong>4. How did you find the website?</strong></label><br><br>
-            <input type="radio" id="Search" name="found">
+            <div class="surveyRadio">
+                <input type="radio" id="Search" name="found">
             <label for="Search" class="legendFound">Search engine &MediumSpace;</label>
             <input type="radio" id="friend" name="found">
             <label for="friend" class="legendFound">A friend</label>
             <input type="radio" id="other" name="found">
             <label for="other" class="legendFound">Other &MediumSpace;</label>
+            </div>
             <br><br><br>
 
             <label for="which"><strong>5. Which section do you feel needs the most improving?</strong></label>
             <br><br>
-            <select name="which">
-                <option value="Home">Home</option>
-                <option value="MFT">My Favorite Things</option>
-                <option value="Gallery">Gallery</option>
-                <option value="Blog">Blog</option>
-                <option value="Survey">Survey</option>
-                <option value="Contact">Contact</option>
-            </select><br><br>
+            <div class="surveyRadio">
+                <select name="which">
+                    <option value="Home">Home</option>
+                    <option value="MFT">My Favorite Things</option>
+                    <option value="Gallery">Gallery</option>
+                    <option value="Blog">Blog</option>
+                    <option value="Survey">Survey</option>
+                    <option value="Contact">Contact</option>
+                </select><br><br>
+            </div>
 
             <p>For more input please feel free to <a href="contact.html" style="color: aqua; text-decoration: underline;">contact me.</a></p>
             <br>
-            <input type="submit"  value="Submit">
+            <div class="surveyRadio">
+                <input type="submit"  value="Submit">
             <input type="reset"  value="Clear">
+            </div>
         </form>
     </fieldset>
 </body>
