@@ -4,81 +4,51 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-Equiv="Cache-Control" Content="no-cache" />
+    <meta http-Equiv="Pragma" Content="no-cache" >
+    <meta http-Equiv="Expires" Content="0" >
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Home</title>
+    <title>Blog</title>
 </head>
 
 <body>
-    <div class="navbar" id="blogEntry">
-        <a href="home.html">Home</a>
-        <a href="favorites.html">My Favorite Things</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
-        <a href="survey.html">Survey</a>
-        <a href="contact.html">Contact</a>
-    </div>
-    <div class="blog">
-        <div class="blogText">
-            <textarea rows="20" cols="100" placeholder="Type here..."></textarea>
-            <input type="submit" value="Post">
+  <script type="text/javascript" src="./blog.js"></script>
+    <header>
+        <div class="navbar">
+            <a href="home.html">Home</a>
+            <a href="favorites.html">My Favorite Things</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blog.html">Blog</a>
+            <a href="games.html">Games</a>
+            <a href="survey.html">Survey</a>
+            <a href="contact.html">Contact</a>
         </div>
-        <div>
-            <p style="text-align: left;" class="dateNtime">10:42 25.10.2021</p>
-            <p> This is where a post would be if I knew how to implement it with JavaScript.</p>
-        </div>
-    </div>
-    <div class="blog" id="lower">
-        
-        <div>
-            <p style="text-align: left;" class="dateNtime">10:42 25.10.2021</p>
-            <p> This is where a post would be if I knew how to implement it with JavaScript.</p>
-        </div>
-        <div>
-            <p style="text-align: left;" class="dateNtime">10:42 25.10.2021</p>
-            <p> This is where a post would be if I knew how to implement it with JavaScript.</p>
-        </div>
-        <div>
-            <p style="text-align: left;" class="dateNtime">10:42 25.10.2021</p>
-            <p> This is where a post would be if I knew how to implement it with JavaScript.</p>
-        </div>
-        <div>
-            <p style="text-align: left;" class="dateNtime">10:42 25.10.2021</p>
-            <p> This is where a post would be if I knew how to implement it with JavaScript.</p>
-        </div>
-        <div>
-            <p style="text-align: left;" class="dateNtime">10:42 25.10.2021</p>
-            <p> This is where a post would be if I knew how to implement it with JavaScript.</p>
-        </div>
-        <div>
-            <p style="text-align: left;" class="dateNtime">10:42 25.10.2021</p>
-            <p> This is where a post would be if I knew how to implement it with JavaScript.</p>
-        </div>
-        <div>
-            <p style="text-align: left;" class="dateNtime">10:42 25.10.2021</p>
-            <p> This is where a post would be if I knew how to implement it with JavaScript.</p>
-        </div>
-        <div>
-            <p style="text-align: left;" class="dateNtime">10:42 25.10.2021</p>
-            <p> This is where a post would be if I knew how to implement it with JavaScript.</p>
-        </div>
-        <div>
-            <p style="text-align: left;" class="dateNtime">10:42 25.10.2021</p>
-            <p> This is where a post would be if I knew how to implement it with JavaScript.</p>
-        </div>
-        <div>
-            <p style="text-align: left;" class="dateNtime">10:42 25.10.2021</p>
-            <p> This is where a post would be if I knew how to implement it with JavaScript.</p>
-        </div>
-        <div>
-            <p style="text-align: left;" class="dateNtime">10:42 25.10.2021</p>
-            <p> This is where a post would be if I knew how to implement it with JavaScript.</p>
-        </div>
-        <div>
-            <p style="text-align: left;" class="dateNtime">10:42 25.10.2021</p>
-            <p> This is where a post would be if I knew how to implement it with JavaScript.</p>
-        </div>
-
-    </div>
+    </header>
     
+    <div class="blogWrapper">
+
+        <div class="newsBanner">
+            <iframe src="https://www.euronews.com/embed/timeline"  style="border:none; width:100%; height:500px"></iframe>
+            <iframe src="https://www.allrecipes.com/gallery/apple-scone-recipes/" style="border:none; width:100%; height:500px" ></iframe>
+            <iframe src="https://www.accuweather.com/en/mk/skopje/227397/weather-forecast/227397" style="border:none; width:100%;height:500px " ></iframe>
+            
+        </div>
+        <div class="blog" id='myBlog'style="margin-bottom:50px">
+            <div class="blogTextBox" id='blogInput' >
+                <textarea rows="20" cols="100" placeholder="Type here..." id='textbox1'></textarea>
+                <input type="submit" onclick="appendPost(document.getElementById('textbox1').value)" value="Post" id="vnes">
+            </div>
+            <div id="posts" class="blogContainer">
+              <div class="blogText">
+                  <p id="date-time" class="dateNtime"></p>
+                  <p id="newPost"> </p>
+              </div>
+            </div>
+        </div>
+       
+    </div>
+
+
 </body>
+
 </html>

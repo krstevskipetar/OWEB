@@ -5,65 +5,98 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Home</title>
+    <title>Gallery</title>
 </head>
 
-<body>
-    <div class="navbar">
-        <a href="home.html">Home</a>
-        <a href="favorites.html">My Favorite Things</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
-        <a href="survey.html">Survey</a>
-        <a href="contact.html">Contact</a>
+<body id="myBody">
+  <script type="text/javascript" src="./gallery.js"></script>
+    <header>
+        <div class="navbar">
+            <a href="home.html">Home</a>
+            <a href="favorites.html">My Favorite Things</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blog.html">Blog</a>
+            <a href="games.html">Games</a>
+            <a href="survey.html">Survey</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
+    <div class="main">My gallery</div>
+    <div class="newSubmission"> 
+        <textarea style="resize: none;" id="newPic" placeholder="Your image link here..."></textarea>
+        <br>
+        <button type="button" onclick="addPic(document.getElementById('newPic').value)">Post</button>
     </div>
-
     <div class="contentGallery">
         <div class="post">
-            <img class="galleryPic" src="https://media.istockphoto.com/photos/closeup-of-beagle-against-gray-background-picture-id639454418?k=20&m=639454418&s=612x612&w=0&h=v3_gBvLssk6jo2PZee7_vfwXIRa0ch5-6czOoyqedHo=">
+            <img class="galleryPic" id='myImg1'
+                src="https://media.istockphoto.com/photos/closeup-of-beagle-against-gray-background-picture-id639454418?k=20&m=639454418&s=612x612&w=0&h=v3_gBvLssk6jo2PZee7_vfwXIRa0ch5-6czOoyqedHo=">
+
         </div>
         <div class="post">
-            <img class="galleryPic" src="https://www.guidedogs.org/wp-content/uploads/2019/11/website-donate-mobile.jpg">
+            <img class="galleryPic"
+                src="https://i.pinimg.com/originals/97/a8/09/97a8096f32ad5bd41de2c54f5949a06d.jpg">
         </div>
         <div class="post" id="last">
             <img class="galleryPic" src="https://i.pinimg.com/originals/97/a8/09/97a8096f32ad5bd41de2c54f5949a06d.jpg">
         </div>
     </div>
     <div class="commentGallery">
-        <div class="commentDiv">
-            <form>
-                <textarea name="comment" rows=4 cols=53 placeholder="Add a public comment..."></textarea>
-                <br>
-                <input type="submit" name="Submit" value="Post">
-                <input type="reset" name="Clear" value="Clear">
-                <input class="like" type="image" src="https://i.imgur.com/zkmuxAv.png">
-                
-            </form>
+        <div class="commentDiv" id="commentSpace1">
+          <p id="likeButton1" style="float:left;text-align: left"><p style="float:right" id="likeNum1"></p>  <button style="float:right" type="button" class="likeB" onclick="like(0,1)"></button></p>
+          <form>
+              <textarea id="comment1" rows=4 cols=53 placeholder="Add a public comment..."></textarea>
+              <br>
+              <button  type="button" onclick="addComment(document.getElementById('comment1').value,1)">Submit</button>
+              <input type="reset" name="Clear" value="Clear">
+
+          </form>
+              <div id="comments1" class="userCommentContainer">
+                <div class="userComment">
+                    <p id="date-time1" class="dateNtime"></p>
+                    <p id='newPost1'> </p>
+                </div>
+              </div>
+
         </div>
-        <div class="commentDiv">
+        <div class="commentDiv" id="commentSpace2">
+            <p id="likeButton2" style="float:left;text-align: left"><p style="float:right" id="likeNum2"></p>  <button style="float:right" type="button" class="likeB" onclick="like(0,2)"></button></p>
             <form>
-                <textarea name="comment" rows=4 cols=53 placeholder="Add a public comment..."></textarea>
+                <textarea id="comment2" rows=4 cols=53 placeholder="Add a public comment..."></textarea>
                 <br>
-                <input type="submit" name="Submit" value="Post">
+                <button  type="button" onclick="addComment(document.getElementById('comment2').value,2)">Submit</button>
                 <input type="reset" name="Clear" value="Clear">
-                <input class="like" type="image" src="https://i.imgur.com/zkmuxAv.png">
-                
+  
             </form>
-        </div>
-        <div class="commentDiv" id="last">
+                <div id="comments2" class="userCommentContainer">
+                  <div class="userComment">
+                      <p id="date-time2" class="dateNtime"></p>
+                      <p id='newPost2'> </p>
+                  </div>
+                </div>
+          </div>
+          <div class="commentDiv" id="commentSpace3">
+            <p id="likeButton3" style="float:left;text-align: left"><p style="float:right" id="likeNum3"></p>  <button style="float:right" type="button" class="likeB" onclick="like(0,3)"></button></p>
             <form>
-                <textarea name="comment" rows=4 cols=53 placeholder="Add a public comment..."></textarea>
+                <textarea id="comment3" rows=4 cols=53 placeholder="Add a public comment..."></textarea>
                 <br>
-                <input type="submit" name="Submit" value="Post">
+                <button  type="button" onclick="addComment(document.getElementById('comment3').value,3)">Submit</button>
                 <input type="reset" name="Clear" value="Clear">
-                <input class="like" type="image" src="https://i.imgur.com/zkmuxAv.png">
-                
+  
             </form>
-        </div>
+                <div id="comments3" class="userCommentContainer">
+                  <div class="userComment">
+                      <p id="date-time3" class="dateNtime"></p>
+                      <p id='newPost3'> </p>
+                  </div>
+                </div>
+  
+          </div>
     </div>
     <div class="contentGallery">
         <div class="post">
-            <img class="galleryPic" src="https://static01.nyt.com/images/2021/05/11/science/04TB-DOGS/04TB-DOGS-videoSixteenByNineJumbo1600.jpg">
+            <img class="galleryPic"
+                src="https://static01.nyt.com/images/2021/05/11/science/04TB-DOGS/04TB-DOGS-videoSixteenByNineJumbo1600.jpg">
         </div>
         <div class="post">
             <img class="galleryPic" src="https://www.cdc.gov/healthypets/images/pets/angry-dog.jpg?_=03873">
@@ -73,36 +106,57 @@
         </div>
     </div>
     <div class="commentGallery">
-        <div class="commentDiv">
+        <div class="commentDiv" id="commentSpace4">
+            <p id="likeButton4" style="float:left;text-align: left"><p style="float:right" id="likeNum4"></p>  <button style="float:right" type="button" class="likeB" onclick="like(0,4)"></button></p>
             <form>
-                <textarea name="comment" rows=4 cols=53 placeholder="Add a public comment..."></textarea>
+                <textarea id="comment4" rows=4 cols=53 placeholder="Add a public comment..."></textarea>
                 <br>
-                <input type="submit" name="Submit" value="Post">
+                <button  type="button" onclick="addComment(document.getElementById('comment4').value,4)">Submit</button>
                 <input type="reset" name="Clear" value="Clear">
-                <input class="like" type="image" src="https://i.imgur.com/zkmuxAv.png">
-                
+  
             </form>
-        </div>
-        <div class="commentDiv">
+                <div id="comments4" class="userCommentContainer">
+                  <div class="userComment">
+                      <p id="date-time4" class="dateNtime"></p>
+                      <p id='newPost4'> </p>
+                  </div>
+                </div>
+  
+          </div>
+          <div class="commentDiv" id="commentSpace5">
+            <p id="likeButton5" style="float:left;text-align: left"><p style="float:right" id="likeNum5"></p>  <button style="float:right" type="button" class="likeB" onclick="like(0,5)"></button></p>
             <form>
-                <textarea name="comment" rows=4 cols=53 placeholder="Add a public comment..."></textarea>
+                <textarea id="comment5" rows=4 cols=53 placeholder="Add a public comment..."></textarea>
                 <br>
-                <input type="submit" name="Submit" value="Post">
+                <button  type="button" onclick="addComment(document.getElementById('comment5').value,5)">Submit</button>
                 <input type="reset" name="Clear" value="Clear">
-                <input class="like" type="image" src="https://i.imgur.com/zkmuxAv.png">
-                
+  
             </form>
-        </div>
-        <div class="commentDiv" id="last">
+                <div id="comments5" class="userCommentContainer">
+                  <div class="userComment">
+                      <p id="date-time5" class="dateNtime"></p>
+                      <p id='newPost5'> </p>
+                  </div>
+                </div>
+  
+          </div>
+          <div class="commentDiv" id="commentSpace6">
+            <p id="likeButton6" style="float:left;text-align: left"><p style="float:right" id="likeNum6"></p>  <button style="float:right" type="button" class="likeB" onclick="like(0,6)"></button></p>
             <form>
-                <textarea name="comment" rows=4 cols=53 placeholder="Add a public comment..."></textarea>
+                <textarea id="comment6" rows=4 cols=53 placeholder="Add a public comment..."></textarea>
                 <br>
-                <input type="submit" name="Submit" value="Post">
+                <button  type="button" onclick="addComment(document.getElementById('comment6').value,6)">Submit</button>
                 <input type="reset" name="Clear" value="Clear">
-                <input class="like" type="image" src="https://i.imgur.com/zkmuxAv.png">
-                
+  
             </form>
-        </div>
+                <div id="comments6" class="userCommentContainer">
+                  <div class="userComment">
+                      <p id="date-time6" class="dateNtime"></p>
+                      <p id='newPost6'> </p>
+                  </div>
+                </div>
+  
+          </div>
     </div>
     <div class="contentGallery">
         <div class="post">
@@ -116,36 +170,57 @@
         </div>
     </div>
     <div class="commentGallery">
-        <div class="commentDiv">
+        <div class="commentDiv" id="commentSpace7">
+            <p id="likeButton7" style="float:left;text-align: left"><p style="float:right" id="likeNum7"></p>  <button style="float:right" type="button" class="likeB" onclick="like(0,7)"></button></p>
             <form>
-                <textarea name="comment" rows=4 cols=53 placeholder="Add a public comment..."></textarea>
+                <textarea id="comment7" rows=4 cols=53 placeholder="Add a public comment..."></textarea>
                 <br>
-                <input type="submit" name="Submit" value="Post">
+                <button  type="button" onclick="addComment(document.getElementById('comment7').value,7)">Submit</button>
                 <input type="reset" name="Clear" value="Clear">
-                <input class="like" type="image" src="https://i.imgur.com/zkmuxAv.png">
-                
+  
             </form>
-        </div>
-        <div class="commentDiv">
+                <div id="comments7" class="userCommentContainer">
+                  <div class="userComment">
+                      <p id="date-time7" class="dateNtime"></p>
+                      <p id='newPost7'> </p>
+                  </div>
+                </div>
+  
+          </div>
+          <div class="commentDiv" id="commentSpace8">
+            <p id="likeButton8" style="float:left;text-align: left"><p style="float:right" id="likeNum8"></p>  <button style="float:right" type="button" class="likeB" onclick="like(0,8)"></button></p>
             <form>
-                <textarea name="comment" rows=4 cols=53 placeholder="Add a public comment..."></textarea>
+                <textarea id="comment8" rows=4 cols=53 placeholder="Add a public comment..."></textarea>
                 <br>
-                <input type="submit" name="Submit" value="Post">
+                <button  type="button" onclick="addComment(document.getElementById('comment8').value,8)">Submit</button>
                 <input type="reset" name="Clear" value="Clear">
-                <input class="like" type="image" src="https://i.imgur.com/zkmuxAv.png">
-                
+  
             </form>
-        </div>
-        <div class="commentDiv" id="last">
+                <div id="comments8" class="userCommentContainer">
+                  <div class="userComment">
+                      <p id="date-time8" class="dateNtime"></p>
+                      <p id='newPost8'> </p>
+                  </div>
+                </div>
+  
+          </div>
+          <div class="commentDiv" id="commentSpace9">
+            <p id="likeButton9" style="float:left;text-align: left"><p style="float:right" id="likeNum9"></p>  <button style="float:right" type="button" class="likeB" onclick="like(0,9)"></button></p>
             <form>
-                <textarea name="comment" rows=4 cols=53 placeholder="Add a public comment..."></textarea>
+                <textarea id="comment9" rows=4 cols=53 placeholder="Add a public comment..."></textarea>
                 <br>
-                <input type="submit" name="Submit" value="Post">
+                <button  type="button" onclick="addComment(document.getElementById('comment9').value,9)">Submit</button>
                 <input type="reset" name="Clear" value="Clear">
-                <input class="like" type="image" src="https://i.imgur.com/zkmuxAv.png">
-                
+  
             </form>
-        </div>
+                <div id="comments9" class="userCommentContainer">
+                  <div class="userComment">
+                      <p id="date-time9" class="dateNtime"></p>
+                      <p id='newPost9'> </p>
+                  </div>
+                </div>
+  
+          </div>
     </div>
 
 </body>
