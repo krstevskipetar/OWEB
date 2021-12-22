@@ -8,10 +8,11 @@
     <meta http-Equiv="Pragma" Content="no-cache" >
     <meta http-Equiv="Expires" Content="0" >
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <title>Blog</title>
 </head>
 
-<body>
+<body> 
   <script type="text/javascript" src="./blog.js"></script>
     <header>
         <div class="navbar">
@@ -31,20 +32,16 @@
             <iframe src="https://www.euronews.com/embed/timeline"  style="border:none; width:100%; height:500px"></iframe>
             <iframe src="https://www.allrecipes.com/gallery/apple-scone-recipes/" style="border:none; width:100%; height:500px" ></iframe>
             <iframe src="https://www.accuweather.com/en/mk/skopje/227397/weather-forecast/227397" style="border:none; width:100%;height:500px " ></iframe>
+            <iframe src="https://chess24.com/en/read/news?group=0" style="border:none; width:100%;height:500px " ></iframe>
             
         </div>
         <div class="blog" id='myBlog'style="margin-bottom:50px">
             <div class="blogTextBox" id='blogInput' >
                 <textarea rows="20" cols="100" placeholder="Type here..." id='textbox1'></textarea>
-                <input type="submit" onclick="appendPost(document.getElementById('textbox1').value)" value="Post" id="vnes">
-            </div>
-            <div id="posts" class="blogContainer">
-              <div class="blogText">
-                  <p id="date-time" class="dateNtime"></p>
-                  <p id="newPost"> </p>
-              </div>
+                <input type="submit" onclick="appendPost()" value="Post" id="vnes">
             </div>
         </div>
+
        
     </div>
 

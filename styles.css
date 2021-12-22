@@ -8,8 +8,10 @@ body{
     background-repeat: no-repeat;
     background-size: 7%,100%;
     margin:0;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: rgb(77, 112, 128);
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(164, 202, 218);
+   /*
+    background-color: rgb(77, 112, 128);*/
 }
 
 .survey{
@@ -118,12 +120,12 @@ body{
         }
         
         .newsBanner{
-            height:500px;
+            height: 300px;
             max-height:1000px;
             margin-top: 10px;
-            background: none;
+            background:rgb(135, 196, 196);
             height: 200%;
-            padding-bottom: 1000px;
+           
             overflow: scroll;
         }
         .blogWrapper div{
@@ -138,7 +140,7 @@ body{
             row-gap: 50px;
             background:none;
             margin-left: 0;
-            border:none;
+            border:solid;
         }
         .blog div{
 
@@ -164,9 +166,6 @@ body{
             resize: none;
             width: 100%;
             display: block;
-        }
-        .blogText{
-          border:none;
         }
     /* ~BLOG */
 
@@ -309,30 +308,191 @@ body{
             border-right: 5px solid rgb(28, 46, 54) ;
             width: 100%;
             
+            
 
         }
         .userCommentContainer{
           height:100px;
+          overflow-y: scroll !important;
           border:none !important;
+          
           
         }
         .userComment{
             border:none;
             border-bottom: dashed rgb(28, 46, 54)  ;
+            
         }
         #last{
             border:none !important;
         }
+
         .newSubmission{
             width: 50%;
             margin: auto;
             text-align: center;
-            margin-top: 30px;
+            margin-top: 100px;
 
         }
         #newPic{
             width: 50%;
         }
+        #photoContainer{
+            border:none;
+            background:none;
+            margin-bottom: 150px;
+        }
+        .scrolling-wrapper {
+            overflow-x: hidden;
+            overflow-y: hidden;
+            white-space: nowrap;
+            background: none;
+            border: none;
+            
+          }
+        .card{
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 5px;
+            
+          }
+          .card figure img{
+            width: 512px;
+            height: 512px;
+          }
+          #slideLeft,#slideRight{
+              background:none;
+              border:none;
+              margin-top: 250px;
+              opacity: 0.7;
+          }
+          #slideLeft:hover {
+            opacity: 1;
+            -webkit-transition: all 0.8s ease-in-out;
+            -moz-transition: all 0.8s ease-in-out;
+            -o-transition: all 0.8s ease-in-out;
+            -ms-transition: all 0.8s ease-in-out;
+            transition: all 0.8s ease-in-out;
+            
+        
+          }
+          #slideRight:hover {
+            opacity: 1;
+            -webkit-transition: all 0.8s ease-in-out;
+            -moz-transition: all 0.8s ease-in-out;
+            -o-transition: all 0.8s ease-in-out;
+            -ms-transition: all 0.8s ease-in-out;
+            transition: all 0.8s ease-in-out;
+            
+        
+          }
+          #slideLeft{
+              float:left;
+          }
+          #slideRight{
+              float:right;
+          }
+          .cardUser{
+            margin: auto;
+            width: 512px;
+            height: 512px;
+            margin-bottom: 50px;
+            
+          }
+          .cardUser figure img{
+            width: 512px;
+            height: 512px;
+            padding-bottom: 5px;
+            float: left;
+            
+          }
+          #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.8s;
+          }
+          
+          #myImg:hover {opacity: 0.7;}
+          
+          /* The Modal (background) */
+          .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+          }
+          
+          /* Modal Content (image) */
+          .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+          }
+          
+          /* Caption of Modal Image */
+          #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+          }
+          
+          /* Add Animation */
+          .modal-content, #caption {  
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+          }
+          
+          @-webkit-keyframes zoom {
+            from {-webkit-transform:scale(0)} 
+            to {-webkit-transform:scale(1)}
+          }
+          
+          @keyframes zoom {
+            from {transform:scale(0)} 
+            to {transform:scale(1)}
+          }
+          
+          /* The Close Button */
+          .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.8s;
+            margin-top: 100px;
+          }
+          
+          .close:hover,
+          .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+          }
+          
+          /* 100% Image Width on Smaller Screens */
+          @media only screen and (max-width: 700px){
+            .modal-content {
+              width: 100%;
+            }
+          }
+
     /* ~GALLERY */
 
     /* SURVEY */
@@ -416,7 +576,7 @@ body{
         transition: all  0.6s ease-in-out;
     }
     .filmPic:hover ,.musicPic:hover{
-        transition: all  0.3s ease-in-out;
+        transition: all  0.8s ease-in-out;
         transform: scale(1.02,1.02) rotate3d(-1,-1,1,5deg);
 
     }
@@ -424,6 +584,12 @@ body{
         width:100%;
         margin: auto;
         height: 100%;
+        border-radius: 5px;
+            cursor: pointer;
+            transition: 0.8s;
+    }
+    img.galleryPic:hover{
+        opacity: 0.7;
     }
 
     p img{
@@ -589,6 +755,7 @@ canvas{
 .gameLinkContainer{
     border-top: none !important;
     border-bottom: none !important;
+    height: 150px;
 }
 .tvImg{
     margin: auto;
@@ -605,3 +772,5 @@ canvas{
     padding-bottom: 500px;
    
 }
+
+/*  ~GAME      */

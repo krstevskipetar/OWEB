@@ -17,20 +17,12 @@ function checkTime(i) {
     return i;
 }
 
-function appendPost(myPost){
-  if(flag){
-    flag=0;
-    document.getElementById("date-time").innerHTML=whatTimeIsIt();
-    document.getElementById('newPost').innerHTML=myPost;
-  }else{
+function appendPost(){
+  $(document).ready(function(){
+    var post=$("#textbox1").val();
+    var blogString='<div class="blogText"><p id="date-time" class="dateNtime">'+whatTimeIsIt()+'</p><p id="newPost">'+post+'</p></div>'
+    $(blogString).insertAfter('.blogTextBox');
 
-    let p=document.getElementById('posts');
-    let prevPost=p.cloneNode(true);
-
-    document.getElementById("date-time").innerHTML=whatTimeIsIt();
-    document.getElementById('newPost').innerHTML=myPost;
-
-    document.getElementById('myBlog').appendChild(prevPost);
-  }
-
+  });
+  
 }
