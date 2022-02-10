@@ -92,7 +92,6 @@ body{
     }
     /* BLOG */
         .blog{
-
             border:none;
             border-bottom: dashed;
             border-color:cornsilk;
@@ -114,18 +113,17 @@ body{
             display: grid;
             grid-template-columns: 20% 80%;
             grid-template-columns: flex;
-            
-            overflow-y:auto
-
+            overflow-y:auto;
+            border-radius: 7%;
         }
         
         .newsBanner{
             height: 300px;
             max-height:1000px;
             margin-top: 10px;
-            background:rgb(135, 196, 196);
+            background:rgb(121, 187, 187);
             height: 200%;
-           
+           border:none;
             overflow: scroll;
         }
         .blogWrapper div{
@@ -160,12 +158,16 @@ body{
             border: cadetblue ;
             background-color: rgb(66, 109, 110) !important;
             width: 120%;
+            border-radius: 5%;
 
         }
         .blog textarea{
             resize: none;
             width: 100%;
             display: block;
+        }
+        .blogText{
+            border-radius: 5%;
         }
     /* ~BLOG */
 
@@ -354,7 +356,7 @@ body{
             display: inline-block;
             vertical-align: top;
             margin-right: 5px;
-            
+            border-radius: 10%;
           }
           .card figure img{
             width: 512px;
@@ -396,6 +398,7 @@ body{
             margin: auto;
             width: 512px;
             height: 512px;
+            border-radius: 10%;
             margin-bottom: 50px;
             
           }

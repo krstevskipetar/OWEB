@@ -106,6 +106,7 @@ function loadModal(imgNum) {
     var span = document.getElementsByClassName("close")[0];
     $(document).on('keyup', function (e) {
       if (e.key == "Escape") {
+        $("#caption").empty();
         emptyP();
         modal.style.display = "none";
       }
@@ -117,7 +118,7 @@ function loadModal(imgNum) {
     }
   });
 }
-function loadModal() {
+function loaddModal() {
   $(document).ready(function () {
     var modal = document.getElementById("myModal");
     var img = document.getElementById("photoByUser");
